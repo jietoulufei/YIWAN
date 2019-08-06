@@ -1,29 +1,37 @@
-
-    <form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm()">
-      <nz-form-item>
-        <nz-form-control nzErrorTip="Please input your username!">
-          <nz-input-group nzPrefixIcon="user">
-            <input type="text" nz-input formControlName="userName" placeholder="Username" />
-          </nz-input-group>
-        </nz-form-control>
-      </nz-form-item>
-      <nz-form-item>
-        <nz-form-control nzErrorTip="Please input your Password!">
-          <nz-input-group nzPrefixIcon="lock">
-            <input type="password" nz-input formControlName="password" placeholder="Password" />
-          </nz-input-group>
-        </nz-form-control>
-      </nz-form-item>
-      <nz-form-item>
-        <nz-form-control>
-          <label nz-checkbox formControlName="remember">
-            <span>Remember me</span>
-          </label>
-          <a class="login-form-forgot" class="login-form-forgot">Forgot password</a>
-          <button nz-button class="login-form-button" [nzType]="'primary'">Log in</button>
-          Or
-          <a>register now!</a>
-        </nz-form-control>
-      </nz-form-item>
-    </form>
-  
+<div class="containerBox">
+    <div nz-row class="containerBox" nzType="flex" nzAlign="middle">
+        <div nz-col nzXs="0" nzSm="0" nzMd="2" nzLg="4" nzXl="6" nzXXl="8"></div>
+        <div nz-col nzXs="24" nzSm="24" nzMd="10" nzLg="8" nzXl="6" nzXXl="4" style="height: 274px;">
+            <div class="tenThousandBg"></div>
+        </div>
+        <div nz-col nzXs="24" nzSm="24" nzMd="10" nzLg="8" nzXl="6" nzXXl="4">
+            <form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm()">
+                <nz-form-item>
+                    <nz-form-control nzErrorTip="请输入您的账号!">
+                        <nz-input-group nzPrefixIcon="user">
+                            <input type="text" nz-input formControlName="userName" placeholder="账号" />
+                        </nz-input-group>
+                    </nz-form-control>
+                </nz-form-item>
+                <nz-form-item>
+                    <nz-form-control nzErrorTip="请输入您的密码!">
+                        <nz-input-group nzPrefixIcon="lock">
+                            <input type="password" nz-input formControlName="password" placeholder="密码" />
+                        </nz-input-group>
+                    </nz-form-control>
+                </nz-form-item>
+                <nz-form-item>
+                    <nz-form-control>
+                        <label nz-checkbox formControlName="remember">
+                  <span>记住我</span>
+                </label>
+                        <a class="login-form-forgot" class="login-form-forgot">忘记密码</a>
+                        <button nz-button class="login-form-button" [nzType]="'primary'">登 入</button> 或
+                        <a>现在注册!</a>
+                    </nz-form-control>
+                </nz-form-item>
+            </form>
+        </div>
+        <div nz-col nzXs="0" nzSm="0" nzMd="2" nzLg="4" nzXl="6" nzXXl="8"></div>
+    </div>
+</div>
