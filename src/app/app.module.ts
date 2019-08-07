@@ -10,7 +10,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { registerLocaleData } from '@angular/common';
 import zh from '@angular/common/locales/zh';
 import { LoginComponent } from './login/login.component';
-import { IndexPageComponent } from './index-page/index-page.component';
 import { NgxEchartsModule } from 'ngx-echarts';
 registerLocaleData(zh);
 
@@ -18,7 +17,6 @@ registerLocaleData(zh);
   declarations: [
     AppComponent,
     LoginComponent,
-    IndexPageComponent
   ],
   imports: [
     BrowserModule,

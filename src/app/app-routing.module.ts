@@ -7,7 +7,7 @@ import { IndexPageComponent } from './index-page/index-page.component';
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
-  { path: 'indexPage', component: IndexPageComponent },
+  { path: 'indexPage', loadChildren: () => import('./index-page/index-page.module').then(m => m.IndexPageModule) }
 ];
 
 @NgModule({
