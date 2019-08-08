@@ -2,7 +2,6 @@ import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { IndexPageComponent } from './index-page.component';
 import { AllViewComponent } from './coding/all-view/all-view.component';
-import { WebViewComponent } from './coding/web-view/web-view.component';
 
 const routes: Routes = [
   {

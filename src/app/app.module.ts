@@ -11,12 +11,14 @@ import { registerLocaleData } from '@angular/common';
 import zh from '@angular/common/locales/zh';
 import { LoginComponent } from './login/login.component';
 import { ShareModule } from './share/share.module';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 registerLocaleData(zh);
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     ShareModule,
