@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { IndexPageComponent } from './index-page.component';
 import { IndexPageRoutingModule } from './index-page-routing.module';
-import { NgZorroAntdModule, NZ_I18N, zh_CN } from 'ng-zorro-antd';
 import { AllViewComponent } from './coding/all-view/all-view.component';
+import { ShareModule } from '../share/share.module';
 
 @NgModule({
   declarations: [
@@ -11,10 +10,9 @@ import { AllViewComponent } from './coding/all-view/all-view.component';
     AllViewComponent, 
   ],
   imports: [
-    CommonModule,
+    ShareModule,
     IndexPageRoutingModule,
-    NgZorroAntdModule
   ],
-  exports: [IndexPageComponent]
+  exports: []
 })
 export class IndexPageModule { }
