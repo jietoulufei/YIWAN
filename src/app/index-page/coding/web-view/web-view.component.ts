@@ -10,6 +10,7 @@ export class WebViewComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    
   }
 
 }
