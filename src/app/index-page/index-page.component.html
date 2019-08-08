@@ -6,13 +6,6 @@
                 <h1>Ten Thousand</h1>
             </a>
         </div>
-        <!-- <ul nz-menu nzMode="inline" nzTheme="dark" [nzInlineCollapsed]="isCollapsed">
-            <li nz-menu-item nz-tooltip nzSelected>
-                <i nz-icon nzType="mail"></i>
-                <span>Navigation One</span>
-            </li>
-
-        </ul> -->
         <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
             <li nz-submenu nzOpen nzTitle="编程" nzIcon="code">
                 <ul>
@@ -20,7 +13,7 @@
                         <a [routerLink]="[ '/indexPage/allView']">总览</a>
                     </li>
                     <li nz-menu-item nzMatchRouter>
-                        <a>前端</a>
+                        <a [routerLink]="[ '/indexPage/webView']">前端</a>
                     </li>
                     <li nz-menu-item nzMatchRouter>
                         <a>后端</a>
