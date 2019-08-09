@@ -13,6 +13,7 @@ import { ShareModule } from '../share/share.module';
     ShareModule,
     IndexPageRoutingModule,
   ],
-  exports: []
+  exports: [],
+  providers:[]
 })
 export class IndexPageModule { }
