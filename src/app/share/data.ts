@@ -51,7 +51,7 @@ const allData = {
         "tyep": '前端',
     },
     "E-Chart": {
-        "time": 4,
+        "time": 7.5,
         "startTime": "2018/10/10",
         "endTime": "2019/8/5",
         "tyep": '前端',
@@ -224,7 +224,7 @@ const webData = {
         "tyep": '前端',
     },
     "E-Chart": {
-        "time": 4,
+        "time": 7.5,
         "startTime": "2018/10/10",
         "endTime": "2019/8/5",
         "tyep": '前端',

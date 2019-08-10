@@ -38,6 +38,7 @@ export class MethodsService {
   getWebData() {
     const webDataObject = {
       "allTime": Object.values(webData).map(v => v.time).reduce((a, b) => a + b),//前端总时长
+      "allObject": webData
     }
     return webDataObject;
   };
