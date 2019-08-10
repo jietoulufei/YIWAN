@@ -110,7 +110,11 @@ export class AllViewComponent implements OnInit {
       },
       toolbox: {  //保存下载
         feature: {
-          saveAsImage: {}
+          saveAsImage: {
+            name: '总览', //下载图片名称
+            title: '保存',
+            pixelRatio: 5,//优化大图下载分辨图 目前6 最大值
+          }
         }
       },
       title: [{
@@ -149,7 +153,7 @@ export class AllViewComponent implements OnInit {
         data: progress.items,
         axisLabel: {
           interval: 0,
-          rotate: 30
+          rotate: 20 //柱状图名称倾斜
         },
         splitLine: {
           show: false
