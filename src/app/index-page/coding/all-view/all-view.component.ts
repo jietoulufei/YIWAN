@@ -60,12 +60,24 @@ export class AllViewComponent implements OnInit {
     /**
      * 饼图数据
      */
-    var downloadJson = {
-      "echarts.min.js": 17365,
-      "echarts.simple.min.js": 4079,
-      "echarts.common.min.js": 6929,
-      "echarts.js": 14890
+    const pie = {
+      "前端": this.charData.getWebData().allTime,
+      "后端": this.charData.getBackData().allTime,
+      "渗透": this.charData.getHackData().allTime,
+      "工具": this.charData.getToolsData().allTime,
     };
+
+    /**
+     * 环形进度图
+     */
+    const cricleProgress = {
+      items: ['已完成', '未完成'],
+      data: [
+        { value: progress.all, name: '已完成' },
+        { value: 10000 - progress.all, name: '未完成' },
+      ],
+      learnPercent: Math.round((progress.all / 10000) * 10000) / 100 + '%'
+    }
 
     /**
      * chart背景水印
@@ -90,11 +102,11 @@ export class AllViewComponent implements OnInit {
         repeat: 'repeat'
       },
       tooltip: {},
-      legend: {
+      legend: {   //环形饼图
         orient: 'vertical',
         x: 'right',
         y: 'bottom',
-        data: ['直接访问', '邮件营销']
+        data: cricleProgress.items
       },
       toolbox: {  //保存下载
         feature: {
@@ -107,11 +119,15 @@ export class AllViewComponent implements OnInit {
         x: '25%',
         textAlign: 'center'
       }, {
-        text: '各版本下载',
-        subtext: '总计 ' + Object.keys(downloadJson).reduce(function (all, key) {
-          return all + downloadJson[key];
-        }, 0),
+        text: '各技能栈',
+        subtext: '总计 ' + progress.all,
         x: '75%',
+        textAlign: 'center'
+      }, {
+        text: '总进度',
+        subtext: cricleProgress.learnPercent,
+        x: '75%',
+        y: '50%',
         textAlign: 'center'
       }],
       grid: [{
@@ -166,9 +182,14 @@ export class AllViewComponent implements OnInit {
         },
         data: progress.timeBarBg
       }, {
+        name: '占比',
+        tooltip: {
+          trigger: 'item',
+          formatter: "{a} <br/>{b}: {c} ({d}%)"
+        },
         type: 'pie', //饼图
         radius: [0, '30%'],
-        center: ['75%', '25%'],
+        center: ['75%', '30%'],
         itemStyle: {
           normal: {
             //好，这里就是重头戏了，定义一个list，然后根据所以取得不同的值，这样就实现了，
@@ -181,10 +202,10 @@ export class AllViewComponent implements OnInit {
             }
           }
         },
-        data: Object.keys(downloadJson).map(function (key) {
+        data: Object.keys(pie).map(function (key) {
           return {
-            name: key.replace('.js', ''),
-            value: downloadJson[key]
+            name: key,
+            value: pie[key]
           }
         })
       }, {
@@ -227,10 +248,7 @@ export class AllViewComponent implements OnInit {
             }
           }
         },
-        data: [
-          { value: 335, name: '直接访问' },
-          { value: 310, name: '邮件营销' },
-        ]
+        data: cricleProgress.data
       }]
     }
   }
