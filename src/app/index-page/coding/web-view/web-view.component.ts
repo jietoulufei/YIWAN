@@ -8,6 +8,16 @@ import { MethodsService } from 'src/app/share/methods.service';
 })
 export class WebViewComponent implements OnInit {
   /**
+   * 事件流
+   */
+  ob$;
+  
+  /**
+   * 通过ngIf 操控渲染canvas dom
+   */
+  expression = true;
+
+  /**
    * chart options
    */
   chartOption;
@@ -17,7 +27,21 @@ export class WebViewComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.ob$ = this.sideBarMs$.getSideEvent().subscribe(val => {
+      console.log("ToolsViewComponent", val)
+      this.expression = false;
+      setTimeout(v => {
+        this.expression = true;
+      }, 200)
+    });
+
     this.chartInit();
+  }
+
+  ngOnDestroy(): void {
+    //Called once, before the instance is destroyed.
+    //Add 'implements OnDestroy' to the class.
+    this.ob$.unsubscribe();
   }
 
   /**
