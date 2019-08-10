@@ -134,9 +134,9 @@ export class AllViewComponent implements OnInit {
         y: '50%',
         textAlign: 'center'
       }],
-      grid: [{
+      grid: [{  //柱状图网格
         top: 50,
-        width: '50%',
+        width: '55%',
         bottom: '0%',
         left: 10,
         containLabel: true
