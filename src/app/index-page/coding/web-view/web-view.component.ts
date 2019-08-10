@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./web-view.component.css']
 })
 export class WebViewComponent implements OnInit {
-
+  chartOption
   constructor() { }
 
   ngOnInit() {

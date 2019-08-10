@@ -10,6 +10,7 @@ const routes: Routes = [
       { path: '', component: AllViewComponent },//子路由初始加载
       { path: 'allView', component: AllViewComponent },
       { path: 'webView', loadChildren: () => import('./coding/web-view/web-view.module').then(m => m.WebViewModule) },
+      { path: 'backView', loadChildren: () => import('./coding/back-view/back-view.module').then(m => m.BackViewModule) },
     ]
   },
 ];
