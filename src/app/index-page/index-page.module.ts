@@ -3,11 +3,12 @@ import { IndexPageComponent } from './index-page.component';
 import { IndexPageRoutingModule } from './index-page-routing.module';
 import { AllViewComponent } from './coding/all-view/all-view.component';
 import { ShareModule } from '../share/share.module';
+import { ToolsViewComponent } from './coding/tools-view/tools-view.component';
 
 @NgModule({
   declarations: [
     IndexPageComponent, 
-    AllViewComponent, 
+    AllViewComponent, ToolsViewComponent, 
   ],
   imports: [
     ShareModule,

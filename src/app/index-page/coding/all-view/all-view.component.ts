@@ -7,6 +7,10 @@ import { MethodsService } from 'src/app/share/methods.service';
   styleUrls: ['./all-view.component.css']
 })
 export class AllViewComponent implements OnInit {
+  /**
+   * 事件流
+   */
+  ob$;
 
   constructor(
     private sideBarMs$: MethodsService,
@@ -26,8 +30,8 @@ export class AllViewComponent implements OnInit {
     /**
      * 订阅收缩条 事件流
      */
-    this.sideBarMs$.getSideEvent().subscribe(val => {
-      console.log("haha", val)
+    this.ob$ = this.sideBarMs$.getSideEvent().subscribe(val => {
+      console.log("AllViewComponent", val)
       this.expression = false;
       setTimeout(v => {
         this.expression = true;
@@ -35,6 +39,12 @@ export class AllViewComponent implements OnInit {
     });
 
     this.chartInit();
+  };
+
+  ngOnDestroy(): void {
+    //Called once, before the instance is destroyed.
+    //Add 'implements OnDestroy' to the class.
+    this.ob$.unsubscribe();
   }
 
   /**

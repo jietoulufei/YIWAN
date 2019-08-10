@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MethodsService } from 'src/app/share/methods.service';
 
 @Component({
   selector: 'app-back-view',
@@ -8,11 +9,22 @@ import { Component, OnInit } from '@angular/core';
 export class BackViewComponent implements OnInit {
 
   chartOption
-  constructor() { }
+  constructor(
+    private sideBarMs$: MethodsService,
+    private charData: MethodsService
+  ) { }
 
   ngOnInit() {
-    
+
   };
 
-  
+  ngAfterViewInit(): void {
+    //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
+    //Add 'implements AfterViewInit' to the class.
+    this.sideBarMs$.getSideEvent().subscribe(val => {
+      console.log("BackViewComponent", val)
+
+    });
+  }
+
 }

@@ -21,6 +21,7 @@ export class MethodsService {
    * @param val 
    */
   sendSideEvent(val) {
+    console.log("next",val);
     this.subjectObject.next(val)
   }
 
