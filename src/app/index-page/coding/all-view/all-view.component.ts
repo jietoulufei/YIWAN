@@ -8,7 +8,10 @@ import { MethodsService } from 'src/app/share/methods.service';
 })
 export class AllViewComponent implements OnInit {
 
-  constructor(private sideBarMs$: MethodsService) { }
+  constructor(
+    private sideBarMs$: MethodsService,
+    private charData: MethodsService
+  ) { }
   /**
    * 通过ngIf 操控渲染canvas dom
    */
@@ -38,30 +41,25 @@ export class AllViewComponent implements OnInit {
    * chart图数据加载 
    */
   chartInit() {
-
-    var builderJson = {
-      "all": 10887,
-      "charts": {
-        "map": 3237,
-        "lines": 2164,
-        "bar": 7561,
-        "line": 7778,
-        "pie": 7355,
-        "scatter": 2405,
-        "candlestick": 1842,
-        "radar": 2090,
-        "heatmap": 1762,
-        "treemap": 1593,
-        "graph": 2060,
-        "boxplot": 1537,
-        "parallel": 1908,
-        "gauge": 2107,
-        "funnel": 1692,
-        "sankey": 1568
-      },
-      "ie": 9743
+    /**
+     * 柱状图数据
+     */
+    const progressAll = this.charData.getAllData();
+    const progress = {
+      "all": Object.values(progressAll).map((item) => item.time).reduce((a, b) => a + b),
+      "bg": 500,
+      "timeBar": Object.keys(progressAll).map(function (key) { //时间条
+        return progressAll[key].time;
+      }),
+      "timeBarBg": Object.keys(progressAll).map(function (key) { //时间条背景
+        return 500 - progressAll[key].time;
+      }),
+      "items": Object.keys(progressAll) //柱状条目
     };
 
+    /**
+     * 饼图数据
+     */
     var downloadJson = {
       "echarts.min.js": 17365,
       "echarts.simple.min.js": 4079,
@@ -104,8 +102,8 @@ export class AllViewComponent implements OnInit {
         }
       },
       title: [{
-        text: '在线构建',
-        subtext: '总计 ' + builderJson.all,
+        text: '总览',
+        subtext: '总计 ' + progress.all + 'H',
         x: '25%',
         textAlign: 'center'
       }, {
@@ -125,14 +123,14 @@ export class AllViewComponent implements OnInit {
       }],
       xAxis: [{
         type: 'value',
-        max: builderJson.all,
+        max: progress.bg,
         splitLine: {
           show: false
         }
       }],
       yAxis: [{
         type: 'category',
-        data: Object.keys(builderJson.charts),
+        data: progress.items,
         axisLabel: {
           interval: 0,
           rotate: 30
@@ -151,14 +149,12 @@ export class AllViewComponent implements OnInit {
             show: true
           }
         },
-        itemStyle: {  //柱状图样式
+        itemStyle: {  //柱状图样式  
           normal: {
             color: '#1890FF'
           }
         },
-        data: Object.keys(builderJson.charts).map(function (key) {
-          return builderJson.charts[key];
-        })
+        data: progress.timeBar
       }, {
         type: 'bar',
         stack: 'chart',
@@ -168,9 +164,7 @@ export class AllViewComponent implements OnInit {
             color: '#eee'
           }
         },
-        data: Object.keys(builderJson.charts).map(function (key) {
-          return builderJson.all - builderJson.charts[key];
-        })
+        data: progress.timeBarBg
       }, {
         type: 'pie', //饼图
         radius: [0, '30%'],
