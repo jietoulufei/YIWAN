@@ -11,7 +11,7 @@ export class WebViewComponent implements OnInit {
    * 事件流
    */
   ob$;
-  
+
   /**
    * 通过ngIf 操控渲染canvas dom
    */
@@ -71,6 +71,11 @@ export class WebViewComponent implements OnInit {
       dataYarr.push(v.time);
     });
 
+    /**
+     * 标题总计
+     */
+    let result = `总计 ${this.charData.getWebData().allTime}H`;
+
     this.chartOption = {
       backgroundColor: {
         type: 'pattern',
@@ -81,7 +86,7 @@ export class WebViewComponent implements OnInit {
         text: '前端'
       },
       legend: {
-        data: ['bar'],
+        data: [result],
         align: 'left'
       },
       toolbox: {
@@ -92,7 +97,7 @@ export class WebViewComponent implements OnInit {
           },
           dataView: {},//数据视图工具，可以展现当前图表所用的数据，编辑后可以动态更新。
           saveAsImage: {
-            name: '总览', //下载图片名称
+            name: '前端', //下载图片名称
             title: '保存',
             pixelRatio: 5,//优化大图下载分辨图 目前6 最大值
           }
@@ -120,7 +125,7 @@ export class WebViewComponent implements OnInit {
       yAxis: {
       },
       series: [{
-        name: 'bar',
+        name: result,
         type: 'bar',
         data: dataYarr,
         itemStyle: {

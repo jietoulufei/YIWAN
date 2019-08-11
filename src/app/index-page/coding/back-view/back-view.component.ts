@@ -97,12 +97,24 @@ export class BackViewComponent implements OnInit {
           },
           dataView: {},//数据视图工具，可以展现当前图表所用的数据，编辑后可以动态更新。
           saveAsImage: {
-            name: '总览', //下载图片名称
+            name: '后端', //下载图片名称
             title: '保存',
             pixelRatio: 5,//优化大图下载分辨图 目前6 最大值
           }
         }
       },
+      title: [
+        {
+          text: '后端',
+          subtext: '总计 ' + this.charData.getBackData().allTime + 'H',
+          left: 'left',
+          top: 'top',
+          textAlign: 'left',
+          textStyle: {
+            fontSize: 18
+          }
+        }
+      ],
       tooltip: {
         trigger: 'axis',
         axisPointer: {
