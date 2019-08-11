@@ -50,6 +50,7 @@ export class MethodsService {
   getBackData() {
     const backDataObject = {
       "allTime": Object.values(backData).map(v => v.time).reduce((a, b) => a + b),//后端总时长
+      "allObject": backData
     }
     return backDataObject;
   };
