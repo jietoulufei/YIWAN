@@ -15,9 +15,9 @@ const allData = {
         "tyep": '前端',
     },
     "Angular2": {
-        "time": 140,
+        "time": 145,
         "startTime": "2018/10/21",
-        "endTime": "2019/8/9",
+        "endTime": "2019/8/13",
         "tyep": '前端',
     },
     "jQuery": {
@@ -51,9 +51,9 @@ const allData = {
         "tyep": '前端',
     },
     "E-Chart": {
-        "time": 7.5,
+        "time": 10,
         "startTime": "2018/10/10",
-        "endTime": "2019/8/5",
+        "endTime": "2019/8/13",
         "tyep": '前端',
     },
     "微信小程序": {
@@ -188,9 +188,9 @@ const webData = {
         "tyep": '前端',
     },
     "Angular2": {
-        "time": 140,
+        "time": 145,
         "startTime": "2018/10/21",
-        "endTime": "2019/8/9",
+        "endTime": "2019/8/13",
         "tyep": '前端',
     },
     "jQuery": {
@@ -224,9 +224,9 @@ const webData = {
         "tyep": '前端',
     },
     "E-Chart": {
-        "time": 7.5,
+        "time": 10,
         "startTime": "2018/10/10",
-        "endTime": "2019/8/5",
+        "endTime": "2019/8/13",
         "tyep": '前端',
     },
     "微信小程序": {
