@@ -45,7 +45,7 @@ const allData = {
         "tyep": '前端',
     },
     "NG-ZORRO": {
-        "time": 11,
+        "time": 21,
         "startTime": "2019/7/30",
         "endTime": "2019/8/6",
         "tyep": '前端',
@@ -218,7 +218,7 @@ const webData = {
         "tyep": '前端',
     },
     "NG-ZORRO": {
-        "time": 11,
+        "time": 21,
         "startTime": "2019/7/30",
         "endTime": "2019/8/6",
         "tyep": '前端',
