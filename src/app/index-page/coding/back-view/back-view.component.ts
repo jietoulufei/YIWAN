@@ -160,6 +160,12 @@ export class BackViewComponent implements OnInit {
       }, {
         name: 'glyph',
         type: 'pictorialBar',
+        label: {  //图像内部数据位置
+          normal: {
+            show: true,
+            position: 'insideBottom'
+          }
+        },
         barGap: '-100%',
         symbolPosition: 'end',
         symbolSize: 50,

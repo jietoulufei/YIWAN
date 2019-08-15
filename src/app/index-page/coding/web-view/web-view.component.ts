@@ -127,6 +127,12 @@ export class WebViewComponent implements OnInit {
       series: [{
         name: result,
         type: 'bar',
+        label: {  //每条柱子上显示参数值
+          normal: {
+            show: true,
+            position: 'top'
+          }
+        },
         data: dataYarr,
         itemStyle: {
           color: "#F85D65"
