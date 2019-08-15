@@ -13,6 +13,7 @@ const routes: Routes = [
       { path: 'webView', loadChildren: () => import('./coding/web-view/web-view.module').then(m => m.WebViewModule) },
       { path: 'backView', loadChildren: () => import('./coding/back-view/back-view.module').then(m => m.BackViewModule) },
       { path: 'toolsView', component: ToolsViewComponent },
+      { path: 'editCoding', loadChildren: () => import('./coding/edit-coding/edit-coding.module').then(m => m.EditCodingModule) },
     ]
   },
 ];

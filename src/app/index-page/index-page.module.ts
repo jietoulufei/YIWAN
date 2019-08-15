@@ -8,7 +8,8 @@ import { ToolsViewComponent } from './coding/tools-view/tools-view.component';
 @NgModule({
   declarations: [
     IndexPageComponent, 
-    AllViewComponent, ToolsViewComponent, 
+    AllViewComponent, 
+    ToolsViewComponent 
   ],
   imports: [
     ShareModule,
