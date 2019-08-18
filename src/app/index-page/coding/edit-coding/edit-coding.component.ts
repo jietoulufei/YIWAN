@@ -21,7 +21,7 @@ export class EditCodingComponent implements OnInit {
    * 多选下拉
    */
   listOfOption: Array<any> = [];
-  listOfSelectedValue = ['全部'];
+  listOfSelectedValue = ['all'];
   isNzDisabled: boolean = false;
 
   /**
@@ -41,14 +41,14 @@ export class EditCodingComponent implements OnInit {
   ) {
     this.validateForm = this.fb.group({
       select1: 'all',
-      select2: ['全部']
+      select2: ['all']
     });
   }
 
   ngOnInit(): void {
     this.listOfOption = this.allSelectData.getAllData;
   }
-  
+
   /**
    * 表单提交
    */
@@ -56,7 +56,7 @@ export class EditCodingComponent implements OnInit {
     console.log("this.validateForm", v);
     this.validateForm.reset({
       select1: 'all',
-      select2: ['全部']
+      select2: ['all']
     });//重置清零
   }
 
@@ -65,7 +65,7 @@ export class EditCodingComponent implements OnInit {
    * @param e value值
    */
   topTypeChange(e) {
-    this.listOfSelectedValue = ['全部'];
+    this.listOfSelectedValue = ['all'];
     switch (e) {
       case "all":
         this.listOfOption = this.allSelectData.getAllData;
@@ -89,8 +89,8 @@ export class EditCodingComponent implements OnInit {
    * 小类选择事件
    */
   selectCodeChange(v) {
-    if (v.indexOf('全部') > -1) {
-      this.listOfSelectedValue = ['全部'];
+    if (v.indexOf('all') > -1) {
+      this.listOfSelectedValue = ['all'];
       this.isNzDisabled = true;
     } else {
       this.isNzDisabled = false;

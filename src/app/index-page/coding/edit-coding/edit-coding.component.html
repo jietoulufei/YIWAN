@@ -19,7 +19,7 @@
                 <nz-form-label nzFor="selectCode">小类</nz-form-label>
                 <nz-form-control>
                     <nz-select style="width: 100%" formControlName="select2" nzMode="multiple" nzPlaceHolder="Please select" [(ngModel)]="listOfSelectedValue" name="selectCode" (ngModelChange)="selectCodeChange($event)">
-                        <nz-option nzLabel="全部" nzValue="全部"></nz-option>
+                        <nz-option nzLabel="全部" nzValue="all"></nz-option>
                         <nz-option *ngFor="let option of listOfOption" [nzLabel]="option" [nzValue]="option" [nzDisabled]="isNzDisabled"></nz-option>
                     </nz-select>
                 </nz-form-control>
