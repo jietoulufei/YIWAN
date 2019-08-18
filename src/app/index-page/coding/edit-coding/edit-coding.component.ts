@@ -33,6 +33,7 @@ export class EditCodingComponent implements OnInit {
     getBackData: Object.keys(this.ms.getBackData().allObject),
     getHackData: Object.keys(this.ms.getHackData().allObject),
     getToolsData: Object.keys(this.ms.getToolsData().allObject),
+    getAllDataArr: this.ms.getAllDataArr()
   }
 
   constructor(
@@ -47,6 +48,7 @@ export class EditCodingComponent implements OnInit {
 
   ngOnInit(): void {
     this.listOfOption = this.allSelectData.getAllData;
+    console.log(this.ms.getAllDataArr());
   }
 
   /**

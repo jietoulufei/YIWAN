@@ -32,6 +32,10 @@ export class MethodsService {
     let getData = allData;
     return getData;
   }
+  getAllDataArr(){
+    let getDataArr = Object.entries(allData);
+    return getDataArr;
+  }
 
   /**
    * 获取所有前端数据 
