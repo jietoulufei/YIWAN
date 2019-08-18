@@ -78,3 +78,8 @@ nz-content {
     background: #fff;
     height: 100%;
 }
+
+.inner-content2 {
+    padding: 24px;
+    background: #fff;
+}
