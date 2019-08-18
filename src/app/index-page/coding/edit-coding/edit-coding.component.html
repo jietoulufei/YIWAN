@@ -1,50 +1,32 @@
-<p>编辑-查询</p>
-<!-- <div nz-row>
-    <div nz-col nzXs="12" nzSm="3" nzMd="5" nzLg="5" nzXl="5">
-        Col
-    </div>
-    <div nz-col nzXs="12" nzSm="3" nzMd="5" nzLg="5" nzXl="5">
-        Col
-    </div>
-    <div nz-col nzXs="12" nzSm="3" nzMd="5" nzLg="5" nzXl="5">
-        Col
-    </div>
-    <div nz-col nzXs="12" nzSm="3" nzMd="5" nzLg="5" nzXl="5">
-        Col
-    </div>
-    <div nz-col nzXs="12" nzSm="2" nzMd="4" nzLg="4" nzXl="4">
-        Col
-    </div>
-</div> -->
+<h3>编辑-查询</h3>
+
 <div nz-row>
-    <form nz-form [nzLayout]="vertical">
-        <nz-form-item>
+    <form nz-form [nzLayout]="vertical" [formGroup]="validateForm" (ngSubmit)="onSubmit(validateForm.value)">
+        <nz-form-item nzType="flex" nzJustify="start" [nzGutter]="{ xs: 8, sm: 16, md: 24, lg: 32, xl: 32, xxl: 32 }">
             <div nz-col nzXs="12" nzSm="3" nzMd="5" nzLg="5" nzXl="5">
-                <nz-form-label nzFor="email">E-mail</nz-form-label>
+                <nz-form-label nzFor="topType">大类</nz-form-label>
                 <nz-form-control>
-                    <input nz-input name="email" type="email" id="email">
+                    <nz-select style="width: 100%;" formControlName="select1" [(ngModel)]="selectedValue" nzAllowClear nzPlaceHolder="Choose" name="topType" (ngModelChange)="topTypeChange($event)">
+                        <nz-option nzValue="all" nzLabel="全部"></nz-option>
+                        <nz-option nzValue="webView" nzLabel="前端"></nz-option>
+                        <nz-option nzValue="backView" nzLabel="后端"></nz-option>
+                        <nz-option nzValue="hack" nzLabel="渗透"></nz-option>
+                        <nz-option nzValue="tools" nzLabel="工具"></nz-option>
+                    </nz-select>
                 </nz-form-control>
             </div>
             <div nz-col nzXs="12" nzSm="3" nzMd="5" nzLg="5" nzXl="5">
-                <nz-form-label nzFor="email">E-mail</nz-form-label>
+                <nz-form-label nzFor="selectCode">小类</nz-form-label>
                 <nz-form-control>
-                    <input nz-input name="email" type="email" id="email">
+                    <nz-select style="width: 100%" formControlName="select2" nzMode="multiple" nzPlaceHolder="Please select" [(ngModel)]="listOfSelectedValue" name="selectCode" (ngModelChange)="selectCodeChange($event)">
+                        <nz-option nzLabel="全部" nzValue="全部"></nz-option>
+                        <nz-option *ngFor="let option of listOfOption" [nzLabel]="option" [nzValue]="option" [nzDisabled]="isNzDisabled"></nz-option>
+                    </nz-select>
                 </nz-form-control>
             </div>
-            <div nz-col nzXs="12" nzSm="3" nzMd="5" nzLg="5" nzXl="5">
-                <nz-form-label nzFor="email">E-mail</nz-form-label>
-                <nz-form-control>
-                    <input nz-input name="email" type="email" id="email">
-                </nz-form-control>
-            </div>
-            <div nz-col nzXs="12" nzSm="3" nzMd="5" nzLg="5" nzXl="5">
-                <nz-form-label nzFor="email">E-mail</nz-form-label>
-                <nz-form-control>
-                    <input nz-input name="email" type="email" id="email">
-                </nz-form-control>
-            </div>
-            <div nz-col nzXs="12" nzSm="2" nzMd="4" nzLg="4" nzXl="4">
-                Col
+
+            <div nz-col nzXs="12" nzSm="2" nzMd="4" nzLg="4" nzXl="4" nzOffset="10" style="padding-top: 43px;">
+                <button type="submit" nz-button nzType="primary" style="width:55%"><i nz-icon nzType="search"></i>查询</button>
             </div>
         </nz-form-item>
     </form>

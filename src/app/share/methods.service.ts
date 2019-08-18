@@ -61,6 +61,7 @@ export class MethodsService {
   getHackData() {
     const hackDataObject = {
       "allTime": Object.values(hackData).map(v => v.time).reduce((a, b) => a + b),//渗透总时长
+      "allObject": hackData
     }
     return hackDataObject;
   };
@@ -71,6 +72,7 @@ export class MethodsService {
   getToolsData() {
     const toolsDataObject = {
       "allTime": Object.values(toolsData).map(v => v.time).reduce((a, b) => a + b),//工具总时长
+      "allObject": toolsData
     }
     return toolsDataObject;
   };

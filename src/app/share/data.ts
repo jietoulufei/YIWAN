@@ -15,7 +15,7 @@ const allData = {
         "tyep": '前端',
     },
     "Angular2": {
-        "time": 145,
+        "time": 146,
         "startTime": "2018/10/21",
         "endTime": "2019/8/13",
         "tyep": '前端',
@@ -45,7 +45,7 @@ const allData = {
         "tyep": '前端',
     },
     "NG-ZORRO": {
-        "time": 21,
+        "time": 22,
         "startTime": "2019/7/30",
         "endTime": "2019/8/6",
         "tyep": '前端',
@@ -188,7 +188,7 @@ const webData = {
         "tyep": '前端',
     },
     "Angular2": {
-        "time": 145,
+        "time": 146,
         "startTime": "2018/10/21",
         "endTime": "2019/8/13",
         "tyep": '前端',
@@ -218,7 +218,7 @@ const webData = {
         "tyep": '前端',
     },
     "NG-ZORRO": {
-        "time": 21,
+        "time": 22,
         "startTime": "2019/7/30",
         "endTime": "2019/8/6",
         "tyep": '前端',
