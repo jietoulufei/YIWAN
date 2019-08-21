@@ -15,7 +15,7 @@ const allData = {
         "type": '前端',
     },
     "Angular2": {
-        "time": 146,
+        "time": 148,
         "startTime": "2018/10/21",
         "endTime": "2019/8/13",
         "type": '前端',
@@ -189,7 +189,7 @@ const webData = {
         "type": '前端',
     },
     "Angular2": {
-        "time": 146,
+        "time": 148,
         "startTime": "2018/10/21",
         "endTime": "2019/8/13",
         "type": '前端',

@@ -34,8 +34,8 @@
     </nz-page-header-content>
 </nz-page-header>
 
-<div>
-    <nz-table #basicTable [nzData]="allSelectData.getAllDataArr" nzShowPagination nzShowSizeChanger>
+<div style="margin-top: 30px;">
+    <nz-table #basicTable nzBordered [nzData]="allSelectData.getAllDataArr" nzShowPagination nzShowSizeChanger>
         <thead>
             <tr>
                 <th>名称</th>
@@ -43,6 +43,7 @@
                 <th>起始日</th>
                 <th>终止日</th>
                 <th>总时长</th>
+                <th>編輯</th>
             </tr>
         </thead>
         <tbody>
@@ -53,6 +54,16 @@
                     <td>{{ data[1].startTime }}</td>
                     <td>{{ data[1].endTime }}</td>
                     <td>{{ data[1].time }}</td>
+                    <td>
+                        <ng-container *ngIf="!data[1].edit; else saveTpl">
+                            <!-- *ngIf="true; else saveTpl" -->
+                            <a (click)="startEdit(i)">Edit</a>
+                        </ng-container>
+                        <ng-template #saveTpl>
+                            <a (click)="saveEdit(data.id)">Save</a>
+                            <a nz-popconfirm nzTitle="Sure to cancel?" (nzOnConfirm)="cancelEdit(data.id)">Cancel</a>
+                        </ng-template>
+                    </td>
                 </ng-container>
             </tr>
         </tbody>

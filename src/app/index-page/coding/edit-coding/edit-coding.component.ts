@@ -99,5 +99,12 @@ export class EditCodingComponent implements OnInit {
     }
   }
 
-
+  /**
+   * 編輯操作
+   */
+  startEdit(i): void {
+    //this.allSelectData.getAllDataArr[i][1].edit = true;
+    //console.log(this.allSelectData.getAllDataArr[i][1].edit)
+    
+  }
 }
