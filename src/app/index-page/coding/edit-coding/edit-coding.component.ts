@@ -51,6 +51,13 @@ export class EditCodingComponent implements OnInit {
       select1: 'all',
       select2: ['all']
     });
+    this.validateForm2 = this.fb.group({
+      select1: 'all',
+      select2: ['all'],
+      addValue: '',
+      dateRange: '',
+      addCountTime: ''
+    });
   }
 
   ngOnInit(): void {
@@ -150,4 +157,13 @@ export class EditCodingComponent implements OnInit {
     console.log('Button cancel clicked!');
     this.isVisible = false;
   }
+
+  /**
+   * 起始日 截止日
+   */
+  onChange(v){
+
+  }
+
+  
 }
