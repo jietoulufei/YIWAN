@@ -52,9 +52,9 @@ const allData = {
         "edit": false,
     },
     "NG-ZORRO": {
-        "time": 22,
+        "time": 24,
         "startTime": "2019/7/30",
-        "endTime": "2019/8/6",
+        "endTime": "2019/8/22",
         "type": '前端',
         "edit": false,
     },
@@ -254,9 +254,9 @@ const webData = {
         "edit": false,
     },
     "NG-ZORRO": {
-        "time": 22,
+        "time": 24,
         "startTime": "2019/7/30",
-        "endTime": "2019/8/6",
+        "endTime": "2019/8/22",
         "type": '前端',
         "edit": false,
     },
