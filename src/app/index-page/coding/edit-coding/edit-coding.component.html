@@ -3,7 +3,7 @@
         <div nz-row>
             <form nz-form [nzLayout]="vertical" [formGroup]="validateForm" (ngSubmit)="onSubmit(validateForm.value)">
                 <nz-form-item nzType="flex" nzJustify="start" [nzGutter]="{ xs: 8, sm: 16, md: 24, lg: 32, xl: 32, xxl: 32 }">
-                    <div nz-col nzXs="12" nzSm="3" nzMd="5" nzLg="5" nzXl="5">
+                    <div nz-col nzXs="12" nzSm="12" nzMd="8" nzLg="5" nzXl="5">
                         <nz-form-label nzFor="topType">大类</nz-form-label>
                         <nz-form-control>
                             <nz-select style="width: 100%;" formControlName="select1" [(ngModel)]="selectedValue" nzAllowClear nzPlaceHolder="Choose" name="topType" (ngModelChange)="topTypeChange($event)">
@@ -15,7 +15,7 @@
                             </nz-select>
                         </nz-form-control>
                     </div>
-                    <div nz-col nzXs="12" nzSm="3" nzMd="5" nzLg="5" nzXl="5">
+                    <div nz-col nzXs="12" nzSm="12" nzMd="8" nzLg="5" nzXl="5">
                         <nz-form-label nzFor="selectCode">小类</nz-form-label>
                         <nz-form-control>
                             <nz-select style="width: 100%" formControlName="select2" nzMode="multiple" nzPlaceHolder="Please select" [(ngModel)]="listOfSelectedValue" name="selectCode" (ngModelChange)="selectCodeChange($event)">
@@ -24,8 +24,8 @@
                             </nz-select>
                         </nz-form-control>
                     </div>
-
-                    <div nz-col nzXs="12" nzSm="2" nzMd="4" nzLg="4" nzXl="4" nzOffset="10" style="padding-top: 43px;">
+                    <div nz-col nzXs="0" nzSm="0" nzMd="0" nzLg="9" nzXl="9"></div>
+                    <div nz-col nzXs="12" nzSm="12" nzMd="8" nzLg="5" nzXl="5" style="padding-top: 43px;">
                         <button type="submit" nz-button nzType="primary" style="width:55%"><i nz-icon nzType="search"></i>查询</button>
                     </div>
                 </nz-form-item>
@@ -77,7 +77,7 @@
 <!-- 新增弹框 -->
 <nz-modal [(nzVisible)]="isVisible" nzTitle="添加新项目" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
     <div nz-row>
-        <form nz-form [nzLayout]="vertical" [formGroup]="validateForm" (ngSubmit)="onSubmit(validateForm.value)">
+        <form nz-form [nzLayout]="vertical" [formGroup]="validateForm2" (ngSubmit)="onSubmit(validateForm.value)">
             <nz-form-item nzType="flex" nzJustify="start" [nzGutter]="{ xs: 8, sm: 16, md: 24, lg: 32, xl: 32, xxl: 32 }">
                 <div nz-col nzSpan="12">
                     <nz-form-label nzFor="topType">大类</nz-form-label>

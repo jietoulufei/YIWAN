@@ -12,6 +12,7 @@ export class EditCodingComponent implements OnInit {
    * 表单
    */
   validateForm: FormGroup;
+  validateForm2: FormGroup;
   /**
    * 总类别 --默认all
    */
