@@ -25,6 +25,12 @@ export class EditCodingComponent implements OnInit {
   isNzDisabled: boolean = false;
 
   /**
+   * add弹框
+   */
+  isVisible = false;
+  addValue: string = "";
+  addCountTime: string = "";
+  /**
    * 缓存数据
    */
   allSelectData = {
@@ -103,8 +109,44 @@ export class EditCodingComponent implements OnInit {
    * 編輯操作
    */
   startEdit(i): void {
-    //this.allSelectData.getAllDataArr[i][1].edit = true;
-    //console.log(this.allSelectData.getAllDataArr[i][1].edit)
-    
+    this.allSelectData.getAllDataArr[i][1].edit = true;
+  }
+
+  /**
+   * 保存
+   */
+  saveEdit(i): void {
+    console.log("保存", this.allSelectData.getAllDataArr[i]);
+    this.allSelectData.getAllDataArr[i][1].edit = false;
+  }
+
+  /**
+   * 删除
+   */
+  cancelEdit(i): void {
+    this.allSelectData.getAllDataArr[i][1].edit = false;
+  }
+
+  /**
+   * 显示弹框
+   */
+  showModal(): void {
+    this.isVisible = true;
+  }
+
+  /**
+   * 弹框确认提交
+   */
+  handleOk(): void {
+    console.log('Button ok clicked!');
+    this.isVisible = false;
+  }
+
+  /**
+   * 弹框关闭
+   */
+  handleCancel(): void {
+    console.log('Button cancel clicked!');
+    this.isVisible = false;
   }
 }

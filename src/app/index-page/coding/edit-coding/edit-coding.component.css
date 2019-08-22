@@ -6,3 +6,9 @@ nz-page-header {
     padding: 24px;
     background: #fff;
 }
+
+.addIcon {
+    text-align: right;
+    padding: 10px 0px;
+    cursor: pointer;
+}

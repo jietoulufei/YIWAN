@@ -34,7 +34,11 @@
     </nz-page-header-content>
 </nz-page-header>
 
-<div style="margin-top: 30px;">
+<div class="addIcon">
+    <span><i nz-icon nzType="plus-square" nzTheme="outline" style="font-size: 22px;" (click)="showModal()"></i></span>
+</div>
+
+<div>
     <nz-table #basicTable nzBordered [nzData]="allSelectData.getAllDataArr" nzShowPagination nzShowSizeChanger>
         <thead>
             <tr>
@@ -57,11 +61,11 @@
                     <td>
                         <ng-container *ngIf="!data[1].edit; else saveTpl">
                             <!-- *ngIf="true; else saveTpl" -->
-                            <a (click)="startEdit(i)">Edit</a>
+                            <a (click)="startEdit(i)">编辑</a>
                         </ng-container>
                         <ng-template #saveTpl>
-                            <a (click)="saveEdit(data.id)">Save</a>
-                            <a nz-popconfirm nzTitle="Sure to cancel?" (nzOnConfirm)="cancelEdit(data.id)">Cancel</a>
+                            <a (click)="saveEdit(i)">保存</a>&nbsp;&nbsp;
+                            <a nz-popconfirm nzTitle="确定要删除吗?" (nzOnConfirm)="cancelEdit(i)">删除</a>
                         </ng-template>
                     </td>
                 </ng-container>
@@ -69,3 +73,45 @@
         </tbody>
     </nz-table>
 </div>
+
+<!-- 新增弹框 -->
+<nz-modal [(nzVisible)]="isVisible" nzTitle="添加新项目" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
+    <div nz-row>
+        <form nz-form [nzLayout]="vertical" [formGroup]="validateForm" (ngSubmit)="onSubmit(validateForm.value)">
+            <nz-form-item nzType="flex" nzJustify="start" [nzGutter]="{ xs: 8, sm: 16, md: 24, lg: 32, xl: 32, xxl: 32 }">
+                <div nz-col nzSpan="12">
+                    <nz-form-label nzFor="topType">大类</nz-form-label>
+                    <nz-form-control>
+                        <nz-select style="width: 100%;" formControlName="select1" [(ngModel)]="selectedValue" nzAllowClear nzPlaceHolder="Choose" name="topType" (ngModelChange)="topTypeChange($event)">
+                            <nz-option nzValue="all" nzLabel="全部"></nz-option>
+                            <nz-option nzValue="webView" nzLabel="前端"></nz-option>
+                            <nz-option nzValue="backView" nzLabel="后端"></nz-option>
+                            <nz-option nzValue="hack" nzLabel="渗透"></nz-option>
+                            <nz-option nzValue="tools" nzLabel="工具"></nz-option>
+                        </nz-select>
+                    </nz-form-control>
+                </div>
+                <div nz-col nzSpan="12">
+                    <nz-form-label nzFor="selectCode">小类</nz-form-label>
+                    <nz-form-control>
+                        <input nz-input placeholder="请输入项目名称" [(ngModel)]="addValue" />
+                    </nz-form-control>
+                </div>
+            </nz-form-item>
+            <nz-form-item nzType="flex" nzJustify="start" [nzGutter]="{ xs: 8, sm: 16, md: 24, lg: 32, xl: 32, xxl: 32 }">
+                <div nz-col nzSpan="12">
+                    <nz-form-label nzFor="topType">日期</nz-form-label>
+                    <nz-form-control>
+                        <nz-range-picker [(ngModel)]="dateRange" (ngModelChange)="onChange($event)" [nzPlaceHolder]="['起始日', '截止日']"></nz-range-picker>
+                    </nz-form-control>
+                </div>
+                <div nz-col nzSpan="12">
+                    <nz-form-label nzFor="selectCode">时长</nz-form-label>
+                    <nz-form-control>
+                        <input nz-input placeholder="请输入项目总计时长" [(ngModel)]="addCountTime" />
+                    </nz-form-control>
+                </div>
+            </nz-form-item>
+        </form>
+    </div>
+</nz-modal>
