@@ -9,6 +9,10 @@ import { MethodsService } from 'src/app/share/methods.service';
 })
 export class EditCodingComponent implements OnInit {
   /**
+   * 编辑 日期单元格 样式
+   */
+  dateFormat = 'yyyy/MM/dd';
+  /**
    * 表单
    */
   validateForm: FormGroup;
@@ -165,5 +169,5 @@ export class EditCodingComponent implements OnInit {
 
   }
 
-  
+
 }
