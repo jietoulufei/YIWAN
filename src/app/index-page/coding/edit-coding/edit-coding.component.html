@@ -39,62 +39,62 @@
 </div>
 
 <div>
-    <nz-table #basicTable nzBordered [nzData]="allSelectData.getAllDataArr" nzShowPagination nzShowSizeChanger>
-        <thead>
+    <nz-table #basicTable nzBordered [nzData]="listOfDisplayData" nzShowPagination nzShowSizeChanger>
+        <thead (nzSortChange)="sort($event)" nzSingleSort>
             <tr>
-                <th>名称</th>
-                <th>类别</th>
-                <th>起始日</th>
-                <th>终止日</th>
-                <th>总时长</th>
+                <th nzShowSort nzSortKey="name">名称</th>
+                <th nzShowSort nzSortKey="type">类别</th>
+                <th nzShowSort nzSortKey="startTime">起始日</th>
+                <th nzShowSort nzSortKey="endTime">终止日</th>
+                <th nzShowSort nzSortKey="time">总时长</th>
                 <th>編輯</th>
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let data of allSelectData.getAllDataArr;let i = index">
+            <tr *ngFor="let data of basicTable.data;let i = index">
                 <ng-container *ngIf="i<10">
                     <td>
-                        <ng-container *ngIf="!data[1].edit; else nameInputTpl">
-                            {{ data[0] }}
+                        <ng-container *ngIf="!data.edit; else nameInputTpl">
+                            {{ data.name }}
                         </ng-container>
                         <ng-template #nameInputTpl>
-                            <input type="text" nz-input [(ngModel)]="data[0]" />
+                            <input type="text" nz-input [(ngModel)]="data.name" />
                         </ng-template>
                     </td>
                     <td>
-                        <ng-container *ngIf="!data[1].edit; else typeInputTpl">
-                            {{ data[1].type }}
+                        <ng-container *ngIf="!data.edit; else typeInputTpl">
+                            {{ data.type }}
                         </ng-container>
                         <ng-template #typeInputTpl>
-                            <input type="text" nz-input [(ngModel)]="data[1].type" />
+                            <input type="text" nz-input [(ngModel)]="data.type" />
                         </ng-template>
                     </td>
                     <td>
-                        <ng-container *ngIf="!data[1].edit; else startTimeInputTpl">
-                            {{ data[1].startTime }}
+                        <ng-container *ngIf="!data.edit; else startTimeInputTpl">
+                            {{ data.startTime }}
                         </ng-container>
                         <ng-template #startTimeInputTpl>
-                            <nz-date-picker [nzFormat]="dateFormat" [(ngModel)]="data[1].startTime"></nz-date-picker>
+                            <nz-date-picker [nzFormat]="dateFormat" [(ngModel)]="data.startTime"></nz-date-picker>
                         </ng-template>
                     </td>
                     <td>
-                        <ng-container *ngIf="!data[1].edit; else endTimeInputTpl">
-                            {{ data[1].endTime }}
+                        <ng-container *ngIf="!data.edit; else endTimeInputTpl">
+                            {{ data.endTime }}
                         </ng-container>
                         <ng-template #endTimeInputTpl>
-                            <nz-date-picker [nzFormat]="dateFormat" [(ngModel)]="data[1].endTime"></nz-date-picker>
+                            <nz-date-picker [nzFormat]="dateFormat" [(ngModel)]="data.endTime"></nz-date-picker>
                         </ng-template>
                     </td>
                     <td>
-                        <ng-container *ngIf="!data[1].edit; else timeInputTpl">
-                            {{ data[1].time }}
+                        <ng-container *ngIf="!data.edit; else timeInputTpl">
+                            {{ data.time }}
                         </ng-container>
                         <ng-template #timeInputTpl>
-                            <input type="text" nz-input [(ngModel)]="data[1].time" />
+                            <input type="text" nz-input [(ngModel)]="data.time" />
                         </ng-template>
                     </td>
                     <td>
-                        <ng-container *ngIf="!data[1].edit; else saveTpl">
+                        <ng-container *ngIf="!data.edit; else saveTpl">
                             <!-- *ngIf="true; else saveTpl" -->
                             <a (click)="startEdit(i)">编辑</a>
                         </ng-container>

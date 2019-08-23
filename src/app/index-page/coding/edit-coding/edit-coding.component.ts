@@ -44,7 +44,11 @@ export class EditCodingComponent implements OnInit {
     getBackData: Object.keys(this.ms.getBackData().allObject),
     getHackData: Object.keys(this.ms.getHackData().allObject),
     getToolsData: Object.keys(this.ms.getToolsData().allObject),
-    getAllDataArr: this.ms.getAllDataArr()
+    getAllDataArr: this.ms.getAllDataArr(),
+    getformatData: this.ms.getAllDataArr().map(item => {
+      item[1]["name"] = item[0];
+      return item[1]
+    })
   }
 
   constructor(
@@ -62,11 +66,58 @@ export class EditCodingComponent implements OnInit {
       dateRange: '',
       addCountTime: ''
     });
+    console.log(this.allSelectData.getformatData);
+
   }
+
+  /**
+   * 排序
+   */
+  sortName: string | null = null;
+  sortValue: string | null = null;
+  searchAddress: string;
+  listOfSearchName: string[] = [];
+  listOfData: Array<any> = this.allSelectData.getformatData;
+  listOfDisplayData: Array<any> = [
+    ...this.listOfData
+  ];
 
   ngOnInit(): void {
     this.listOfOption = this.allSelectData.getAllData;
     console.log(this.ms.getAllDataArr());
+  }
+
+  /**
+   * 排序事件
+   */
+  sort(sort): void {
+    console.log(sort);
+
+    this.sortName = sort.key;
+    this.sortValue = sort.value;
+    this.search();
+  }
+
+  search(): void {
+    /** filter data **/
+    const filterFunc = (item) =>
+      (this.searchAddress ? item.address.indexOf(this.searchAddress) !== -1 : true) &&
+      (this.listOfSearchName.length ? this.listOfSearchName.some(name => item.name.indexOf(name) !== -1) : true);
+    const data = this.listOfData.filter(item => filterFunc(item));
+    /** sort data **/
+    if (this.sortName && this.sortValue) {
+      this.listOfDisplayData = data.sort((a, b) =>
+        this.sortValue === 'ascend'
+          ? a[this.sortName!] > b[this.sortName!]
+            ? 1
+            : -1
+          : b[this.sortName!] > a[this.sortName!]
+            ? 1
+            : -1
+      );
+    } else {
+      this.listOfDisplayData = data;
+    }
   }
 
   /**
@@ -121,22 +172,22 @@ export class EditCodingComponent implements OnInit {
    * 編輯操作
    */
   startEdit(i): void {
-    this.allSelectData.getAllDataArr[i][1].edit = true;
+    this.listOfDisplayData[i].edit = true;
   }
 
   /**
    * 保存
    */
   saveEdit(i): void {
-    console.log("保存", this.allSelectData.getAllDataArr[i]);
-    this.allSelectData.getAllDataArr[i][1].edit = false;
+    console.log("保存", this.listOfDisplayData[i]);
+    this.listOfDisplayData[i].edit = false;
   }
 
   /**
    * 删除
    */
   cancelEdit(i): void {
-    this.allSelectData.getAllDataArr[i][1].edit = false;
+    this.listOfDisplayData[i].edit = false;
   }
 
   /**
@@ -165,7 +216,7 @@ export class EditCodingComponent implements OnInit {
   /**
    * 起始日 截止日
    */
-  onChange(v){
+  onChange(v) {
 
   }
 
