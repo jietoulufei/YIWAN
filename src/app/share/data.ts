@@ -122,9 +122,9 @@ const allData = {
         "edit": false,
     },
     "Java": {
-        "time": 2.5,
+        "time": 8,
         "startTime": "2019/7/30",
-        "endTime": "2019/7/30",
+        "endTime": "2019/8/26",
         "type": '后端',
         "edit": false,
     },
@@ -330,9 +330,9 @@ const backData = {
         "edit": false,
     },
     "Java": {
-        "time": 2.5,
+        "time": 8,
         "startTime": "2019/7/30",
-        "endTime": "2019/7/30",
+        "endTime": "2019/8/26",
         "type": '后端',
         "edit": false,
     },
