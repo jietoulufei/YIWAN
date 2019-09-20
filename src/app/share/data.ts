@@ -3,9 +3,9 @@
  */
 const allData = {
     "JavaScript": {
-        "time": 364,
+        "time": 370,
         "startTime": "2017/3/1",
-        "endTime": "2019/8/18",
+        "endTime": "2019/9/20",
         "type": '前端',
         "edit": false,
     },
@@ -122,9 +122,9 @@ const allData = {
         "edit": false,
     },
     "Java": {
-        "time": 8,
+        "time": 18,
         "startTime": "2019/7/30",
-        "endTime": "2019/8/26",
+        "endTime": "2019/9/20",
         "type": '后端',
         "edit": false,
     },
@@ -205,9 +205,9 @@ const allData = {
  */
 const webData = {
     "JavaScript": {
-        "time": 364,
+        "time": 370,
         "startTime": "2017/3/1",
-        "endTime": "2019/8/18",
+        "endTime": "2019/9/20",
         "type": '前端',
         "edit": false,
     },
@@ -330,9 +330,9 @@ const backData = {
         "edit": false,
     },
     "Java": {
-        "time": 8,
+        "time": 18,
         "startTime": "2019/7/30",
-        "endTime": "2019/8/26",
+        "endTime": "2019/9/20",
         "type": '后端',
         "edit": false,
     },
