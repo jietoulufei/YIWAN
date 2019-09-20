@@ -49,7 +49,11 @@ export class EditCodingComponent implements OnInit {
       item[1]["name"] = item[0];
       return item[1]
     })
-  }
+  };
+  /**
+   * 导出Excel数据
+   */
+  excelData: any[];
 
   constructor(
     private fb: FormBuilder,
@@ -68,6 +72,15 @@ export class EditCodingComponent implements OnInit {
     });
     console.log(this.allSelectData.getformatData);
 
+    this.excelData = this.allSelectData.getformatData.map(item => {
+      return {
+        name: item["name"],
+        type: item.type,
+        startTime: item.startTime,
+        endTime: item.endTime,
+        time: item.time
+      }
+    })
   }
 
   /**
@@ -220,5 +233,37 @@ export class EditCodingComponent implements OnInit {
 
   }
 
+  /**
+   * 下载Excel
+   */
+  downExcel() {
+    //要导出的json数据 格式
+    // const jsonData = [{
+    //   name: '路人甲',
+    //   phone: '123456789',
+    //   email: '000@123456.com'
+    // }];
+
+    //列标题，逗号隔开，每一个逗号就是隔开一个单元格
+    let str = `名称,类别,起始日,终止日,总时长\n`;
+    //增加\t为了不让表格显示科学计数法或者其他格式
+    for (let i = 0; i < this.excelData.length; i++) {
+      for (let item in this.excelData[i]) {
+        str += `${this.excelData[i][item] + '\t'},`;
+      }
+      str += '\n';
+    }
+
+    //encodeURIComponent解决中文乱码
+    let uri = 'data:text/csv;charset=utf-8,\ufeff' + encodeURIComponent(str);
+    //通过创建a标签实现
+    let link = document.createElement("a");
+    link.href = uri;
+    //对下载的文件命名
+    link.download = "json数据表.csv";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
 
 }
