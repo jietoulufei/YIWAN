@@ -3,9 +3,9 @@
  */
 const allData = {
     "JavaScript": {
-        "time": 370,
+        "time": 373.5,
         "startTime": "2017/3/1",
-        "endTime": "2019/9/20",
+        "endTime": "2019/9/26",
         "type": '前端',
         "edit": false,
     },
@@ -205,9 +205,9 @@ const allData = {
  */
 const webData = {
     "JavaScript": {
-        "time": 370,
+        "time": 373.5,
         "startTime": "2017/3/1",
-        "endTime": "2019/9/20",
+        "endTime": "2019/9/26",
         "type": '前端',
         "edit": false,
     },

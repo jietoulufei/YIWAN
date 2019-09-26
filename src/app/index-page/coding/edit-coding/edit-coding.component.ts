@@ -247,7 +247,7 @@ export class EditCodingComponent implements OnInit {
     aoa = [["名称", "类别", "起始日", "终止日", "总时长"], ...aoa];
     //var sheet = XLSX.utils.table_to_sheet(table1);//将一个table对象转换成一个sheet对象
     var sheet = XLSX.utils.aoa_to_sheet(aoa);
-    this.openDownloadDialog(this.sheet2blob(sheet), '下载.xlsx');
+    this.openDownloadDialog(this.sheet2blob(sheet), 'Excel数据下载.xlsx');
   };
 
   // 将一个sheet转成最终的excel文件的blob对象，然后利用URL.createObjectURL下载
