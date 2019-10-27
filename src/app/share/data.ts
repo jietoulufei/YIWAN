@@ -3,9 +3,9 @@
  */
 const allData = {
     "JavaScript": {
-        "time": 373.5,
+        "time": 375.5,
         "startTime": "2017/3/1",
-        "endTime": "2019/9/26",
+        "endTime": "2019/10/27",
         "type": '前端',
         "edit": false,
     },
@@ -122,9 +122,9 @@ const allData = {
         "edit": false,
     },
     "Java": {
-        "time": 18,
+        "time": 34,
         "startTime": "2019/7/30",
-        "endTime": "2019/9/20",
+        "endTime": "2019/10/27",
         "type": '后端',
         "edit": false,
     },
@@ -171,9 +171,9 @@ const allData = {
         "edit": false,
     },
     "GitHub": {
-        "time": 11,
+        "time": 11.5,
         "startTime": "2017/6/1",
-        "endTime": "2019/1/3",
+        "endTime": "2019/10/27",
         "type": '工具',
         "edit": false,
     },
@@ -205,9 +205,9 @@ const allData = {
  */
 const webData = {
     "JavaScript": {
-        "time": 373.5,
+        "time": 375.5,
         "startTime": "2017/3/1",
-        "endTime": "2019/9/26",
+        "endTime": "2019/10/27",
         "type": '前端',
         "edit": false,
     },
@@ -330,9 +330,9 @@ const backData = {
         "edit": false,
     },
     "Java": {
-        "time": 18,
+        "time": 34,
         "startTime": "2019/7/30",
-        "endTime": "2019/9/20",
+        "endTime": "2019/10/27",
         "type": '后端',
         "edit": false,
     },
@@ -391,9 +391,9 @@ const hackData = {
  */
 const toolsData = {
     "GitHub": {
-        "time": 11,
+        "time": 11.5,
         "startTime": "2017/6/1",
-        "endTime": "2019/1/3",
+        "endTime": "2019/10/27",
         "type": '工具',
         "edit": false,
     },
