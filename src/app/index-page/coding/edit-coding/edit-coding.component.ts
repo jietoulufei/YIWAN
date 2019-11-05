@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MethodsService } from 'src/app/share/methods.service';
 import * as XLSX from 'xlsx';
@@ -59,7 +59,8 @@ export class EditCodingComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private ms: MethodsService
+    private ms: MethodsService,
+    private changeRef: ChangeDetectorRef //手动变更检测
   ) {
     this.validateForm = this.fb.group({
       select1: 'all',

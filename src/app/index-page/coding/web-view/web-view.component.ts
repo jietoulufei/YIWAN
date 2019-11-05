@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 import { MethodsService } from 'src/app/share/methods.service';
 
 @Component({
@@ -24,15 +24,18 @@ export class WebViewComponent implements OnInit {
   chartOption;
   constructor(
     private sideBarMs$: MethodsService,
-    private charData: MethodsService
+    private charData: MethodsService,
+    private changeRef: ChangeDetectorRef //手动变更检测
   ) { }
 
   ngOnInit() {
     this.ob$ = this.sideBarMs$.getSideEvent().subscribe(val => {
       console.log("ToolsViewComponent", val)
       this.expression = false;
+      this.changeRef.markForCheck();
       setTimeout(v => {
         this.expression = true;
+        this.changeRef.markForCheck();
       }, 200)
     });
 

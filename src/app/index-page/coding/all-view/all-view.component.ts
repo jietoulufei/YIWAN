@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 import { MethodsService } from 'src/app/share/methods.service';
 
 @Component({
@@ -15,7 +15,8 @@ export class AllViewComponent implements OnInit {
 
   constructor(
     private sideBarMs$: MethodsService,
-    private charData: MethodsService
+    private charData: MethodsService,
+    private changeRef: ChangeDetectorRef //手动变更检测
   ) { }
   /**
    * 通过ngIf 操控渲染canvas dom
@@ -32,10 +33,12 @@ export class AllViewComponent implements OnInit {
      * 订阅收缩条 事件流
      */
     this.ob$ = this.sideBarMs$.getSideEvent().subscribe(val => {
-      console.log("AllViewComponent", val)
+      console.log("AllViewComponent", val);
       this.expression = false;
+      this.changeRef.markForCheck();
       setTimeout(v => {
         this.expression = true;
+        this.changeRef.markForCheck();
       }, 200)
     });
 

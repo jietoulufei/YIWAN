@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 import { MethodsService } from 'src/app/share/methods.service';
 
 @Component({
@@ -13,8 +13,11 @@ export class ToolsViewComponent implements OnInit {
    */
   ob$;
 
-  constructor(private sideBarMs$: MethodsService,
-    private charData: MethodsService) { }
+  constructor(
+    private sideBarMs$: MethodsService,
+    private charData: MethodsService,
+    private changeRef: ChangeDetectorRef //手动变更检测
+  ) { }
 
   ngOnInit() {
     this.ob$ = this.sideBarMs$.getSideEvent().subscribe(val => {
