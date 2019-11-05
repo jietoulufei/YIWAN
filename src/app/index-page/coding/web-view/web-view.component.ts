@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { MethodsService } from 'src/app/share/methods.service';
 
 @Component({
   selector: 'app-web-view',
   templateUrl: './web-view.component.html',
-  styleUrls: ['./web-view.component.css']
+  styleUrls: ['./web-view.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class WebViewComponent implements OnInit {
   /**

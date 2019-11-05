@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { MethodsService } from 'src/app/share/methods.service';
 
 @Component({
   selector: 'app-tools-view',
   templateUrl: './tools-view.component.html',
-  styleUrls: ['./tools-view.component.css']
+  styleUrls: ['./tools-view.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ToolsViewComponent implements OnInit {
   /**
@@ -18,7 +19,7 @@ export class ToolsViewComponent implements OnInit {
   ngOnInit() {
     this.ob$ = this.sideBarMs$.getSideEvent().subscribe(val => {
       console.log("ToolsViewComponent", val)
-     
+
     });
   };
 

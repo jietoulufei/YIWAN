@@ -1,11 +1,12 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, ChangeDetectionStrategy } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MethodsService } from 'src/app/share/methods.service';
 import * as XLSX from 'xlsx';
 @Component({
   selector: 'app-edit-coding',
   templateUrl: './edit-coding.component.html',
-  styleUrls: ['./edit-coding.component.css']
+  styleUrls: ['./edit-coding.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class EditCodingComponent implements OnInit {
   @ViewChild('basicTable', { static: true }) greetDiv: ElementRef;

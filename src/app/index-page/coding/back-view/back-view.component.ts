@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { MethodsService } from 'src/app/share/methods.service';
 
 @Component({
   selector: 'app-back-view',
   templateUrl: './back-view.component.html',
-  styleUrls: ['./back-view.component.css']
+  styleUrls: ['./back-view.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class BackViewComponent implements OnInit {
   /**
