@@ -17,7 +17,7 @@ const allData = {
         "edit": false,
     },
     "Angular2": {
-        "time": 148,
+        "time": 153,
         "startTime": "2018/10/21",
         "endTime": "2019/8/13",
         "type": '前端',
@@ -122,9 +122,9 @@ const allData = {
         "edit": false,
     },
     "Java": {
-        "time": 34,
+        "time": 70,
         "startTime": "2019/7/30",
-        "endTime": "2019/10/27",
+        "endTime": "2019/12/27",
         "type": '后端',
         "edit": false,
     },
@@ -219,7 +219,7 @@ const webData = {
         "edit": false,
     },
     "Angular2": {
-        "time": 148,
+        "time": 153,
         "startTime": "2018/10/21",
         "endTime": "2019/8/13",
         "type": '前端',
@@ -330,9 +330,9 @@ const backData = {
         "edit": false,
     },
     "Java": {
-        "time": 34,
+        "time": 70,
         "startTime": "2019/7/30",
-        "endTime": "2019/10/27",
+        "endTime": "2019/12/27",
         "type": '后端',
         "edit": false,
     },

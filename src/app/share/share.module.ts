@@ -10,7 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms'; //用于响�
     NgZorroAntdModule,
     NgxEchartsModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   exports: [
     CommonModule,
