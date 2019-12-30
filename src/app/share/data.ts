@@ -157,9 +157,9 @@ const allData = {
         "edit": false,
     },
     "MySQL": {
-        "time": 4.5,
+        "time": 23.5,
         "startTime": "2018/9/15",
-        "endTime": "2018/9/17",
+        "endTime": "2019/12/31",
         "type": '后端',
         "edit": false,
     },
@@ -365,9 +365,9 @@ const backData = {
         "edit": false,
     },
     "MySQL": {
-        "time": 4.5,
+        "time": 23.5,
         "startTime": "2018/9/15",
-        "endTime": "2018/9/17",
+        "endTime": "2019/12/31",
         "type": '后端',
         "edit": false,
     },
