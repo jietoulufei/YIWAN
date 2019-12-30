@@ -171,9 +171,9 @@ const allData = {
         "edit": false,
     },
     "GitHub": {
-        "time": 11.5,
+        "time": 12,
         "startTime": "2017/6/1",
-        "endTime": "2019/10/27",
+        "endTime": "2019/12/31",
         "type": '工具',
         "edit": false,
     },
@@ -391,9 +391,9 @@ const hackData = {
  */
 const toolsData = {
     "GitHub": {
-        "time": 11.5,
+        "time": 12,
         "startTime": "2017/6/1",
-        "endTime": "2019/10/27",
+        "endTime": "2019/12/31",
         "type": '工具',
         "edit": false,
     },
