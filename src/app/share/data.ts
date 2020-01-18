@@ -3,9 +3,9 @@
  */
 const allData = {
     "JavaScript": {
-        "time": 375.5,
+        "time": 380,
         "startTime": "2017/3/1",
-        "endTime": "2019/10/27",
+        "endTime": "2020/1/18",
         "type": '前端',
         "edit": false,
     },
@@ -73,9 +73,9 @@ const allData = {
         "edit": false,
     },
     "HTML4": {
-        "time": 82.5,
+        "time": 83.5,
         "startTime": "2016/11/1",
-        "endTime": "2018/9/1",
+        "endTime": "2020/1/18",
         "type": '前端',
         "edit": false,
     },
@@ -122,9 +122,9 @@ const allData = {
         "edit": false,
     },
     "Java": {
-        "time": 87,
+        "time": 100,
         "startTime": "2019/7/30",
-        "endTime": "2019/12/31",
+        "endTime": "2020/1/18",
         "type": '后端',
         "edit": false,
     },
@@ -157,9 +157,9 @@ const allData = {
         "edit": false,
     },
     "MySQL": {
-        "time": 23.5,
+        "time": 29,
         "startTime": "2018/9/15",
-        "endTime": "2019/12/31",
+        "endTime": "2020/1/18",
         "type": '后端',
         "edit": false,
     },
@@ -205,9 +205,9 @@ const allData = {
  */
 const webData = {
     "JavaScript": {
-        "time": 375.5,
+        "time": 380,
         "startTime": "2017/3/1",
-        "endTime": "2019/10/27",
+        "endTime": "2020/1/18",
         "type": '前端',
         "edit": false,
     },
@@ -275,9 +275,9 @@ const webData = {
         "edit": false,
     },
     "HTML4": {
-        "time": 82.5,
+        "time": 83.5,
         "startTime": "2016/11/1",
-        "endTime": "2018/9/1",
+        "endTime": "2020/1/18",
         "type": '前端',
         "edit": false,
     },
@@ -330,9 +330,9 @@ const backData = {
         "edit": false,
     },
     "Java": {
-        "time": 87,
+        "time": 100,
         "startTime": "2019/7/30",
-        "endTime": "2019/12/31",
+        "endTime": "2020/1/18",
         "type": '后端',
         "edit": false,
     },
@@ -365,9 +365,9 @@ const backData = {
         "edit": false,
     },
     "MySQL": {
-        "time": 23.5,
+        "time": 29,
         "startTime": "2018/9/15",
-        "endTime": "2019/12/31",
+        "endTime": "2020/1/18",
         "type": '后端',
         "edit": false,
     },
