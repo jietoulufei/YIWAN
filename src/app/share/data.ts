@@ -114,6 +114,13 @@ const allData = {
         "type": '前端',
         "edit": false,
     },
+    "Http": {
+        "time": 4,
+        "startTime": "2020/1/2",
+        "endTime": "2020/1/2",
+        "type": '后端',
+        "edit": false,
+    },
     "Node.js": {
         "time": 45,
         "startTime": "2018/1/4",
@@ -329,6 +336,13 @@ const webData = {
  * 后端数据
  */
 const backData = {
+    "Http": {
+        "time": 4,
+        "startTime": "2020/1/2",
+        "endTime": "2020/1/2",
+        "type": '后端',
+        "edit": false,
+    },
     "Node.js": {
         "time": 45,
         "startTime": "2018/1/4",
