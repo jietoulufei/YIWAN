@@ -38,9 +38,9 @@ const allData = {
         "edit": false,
     },
     "Vue": {
-        "time": 91,
+        "time": 115.5,
         "startTime": "2018/2/8",
-        "endTime": "2018/10/18",
+        "endTime": "2020/2/3",
         "type": '前端',
         "edit": false,
     },
@@ -240,9 +240,9 @@ const webData = {
         "edit": false,
     },
     "Vue": {
-        "time": 91,
+        "time": 115.5,
         "startTime": "2018/2/8",
-        "endTime": "2018/10/18",
+        "endTime": "2020/2/3",
         "type": '前端',
         "edit": false,
     },
