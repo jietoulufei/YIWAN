@@ -3,9 +3,9 @@
  */
 const allData = {
     "JavaScript": {
-        "time": 391,
+        "time": 391.5,
         "startTime": "2017/3/1",
-        "endTime": "2020/2/4",
+        "endTime": "2020/2/24",
         "type": '前端',
         "edit": false,
     },
@@ -17,9 +17,9 @@ const allData = {
         "edit": false,
     },
     "Angular2": {
-        "time": 153,
+        "time": 154,
         "startTime": "2018/10/21",
-        "endTime": "2019/8/13",
+        "endTime": "2020/2/24",
         "type": '前端',
         "edit": false,
     },
@@ -38,9 +38,9 @@ const allData = {
         "edit": false,
     },
     "Vue": {
-        "time": 130.5,
+        "time": 148.5,
         "startTime": "2018/2/8",
-        "endTime": "2020/2/14",
+        "endTime": "2020/2/24",
         "type": '前端',
         "edit": false,
     },
@@ -219,9 +219,9 @@ const allData = {
  */
 const webData = {
     "JavaScript": {
-        "time": 391,
+        "time": 391.5,
         "startTime": "2017/3/1",
-        "endTime": "2020/2/4",
+        "endTime": "2020/2/24",
         "type": '前端',
         "edit": false,
     },
@@ -233,9 +233,9 @@ const webData = {
         "edit": false,
     },
     "Angular2": {
-        "time": 153,
+        "time": 154,
         "startTime": "2018/10/21",
-        "endTime": "2019/8/13",
+        "endTime": "2020/2/24",
         "type": '前端',
         "edit": false,
     },
@@ -254,9 +254,9 @@ const webData = {
         "edit": false,
     },
     "Vue": {
-        "time": 130.5,
+        "time": 148.5,
         "startTime": "2018/2/8",
-        "endTime": "2020/2/14",
+        "endTime": "2020/2/24",
         "type": '前端',
         "edit": false,
     },
