@@ -74,7 +74,7 @@ export class WebViewComponent implements OnInit {
     Object.values(data).map(v => {
       dataYarr.push(v.time);
     });
-
+    console.log("dataYarr",dataYarr)
     /**
      * 标题总计
      */
