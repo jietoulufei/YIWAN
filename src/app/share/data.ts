@@ -3,7 +3,7 @@
  */
 const allData = {
   JavaScript: {
-    time: 391.5,
+    time: 392,
     startTime: "2017/3/1",
     endTime: "2020/2/24",
     type: "前端",
@@ -38,9 +38,9 @@ const allData = {
     edit: false
   },
   Vue: {
-    time: 170,
+    time: 183,
     startTime: "2018/2/8",
-    endTime: "2020/3/27",
+    endTime: "2020/5/17",
     type: "前端",
     edit: false
   },
@@ -65,6 +65,13 @@ const allData = {
     type: "前端",
     edit: false
   },
+  "Cube-UI": {
+    time: 13.5,
+    startTime: "2020/3/1",
+    endTime: "2020/5/17",
+    type: "前端",
+    edit: false
+  },
   "E-Chart": {
     time: 11,
     startTime: "2018/10/10",
@@ -73,21 +80,21 @@ const allData = {
     edit: false
   },
   "uni-app": {
-    time: 2,
+    time: 14,
     startTime: "2020/2/24",
-    endTime: "2020/2/24",
+    endTime: "2020/5/17",
     type: "前端",
     edit: false
   },
   微信小程序: {
-    time: 14,
+    time: 19,
     startTime: "2018/7/6",
     endTime: "2020/3/27",
     type: "前端",
     edit: false
   },
   HTML4: {
-    time: 83.5,
+    time: 84.5,
     startTime: "2016/11/1",
     endTime: "2020/1/18",
     type: "前端",
@@ -108,9 +115,9 @@ const allData = {
     edit: false
   },
   CSS3: {
-    time: 55,
+    time: 59.5,
     startTime: "2017/3/22",
-    endTime: "2019/5/21",
+    endTime: "2020/5/17",
     type: "前端",
     edit: false
   },
@@ -143,9 +150,9 @@ const allData = {
     edit: false
   },
   Java: {
-    time: 106,
+    time: 112,
     startTime: "2019/7/30",
-    endTime: "2020/1/18",
+    endTime: "2020/5/17",
     type: "后端",
     edit: false
   },
@@ -164,9 +171,9 @@ const allData = {
     edit: false
   },
   SpringBoot: {
-    time: 10,
+    time: 23,
     startTime: "2020/2/20",
-    endTime: "2020/3/27",
+    endTime: "2020/5/17",
     type: "后端",
     edit: false
   },
@@ -178,14 +185,14 @@ const allData = {
     edit: false
   },
   Linux: {
-    time: 7,
+    time: 8,
     startTime: "2020/3/6",
     endTime: "2020/3/27",
     type: "后端",
     edit: false
   },
   Nginx: {
-    time: 7,
+    time: 8,
     startTime: "2020/3/10",
     endTime: "2020/3/27",
     type: "后端",
@@ -206,9 +213,9 @@ const allData = {
     edit: false
   },
   MySQL: {
-    time: 29,
+    time: 33,
     startTime: "2018/9/15",
-    endTime: "2020/1/18",
+    endTime: "2020/5/17",
     type: "后端",
     edit: false
   },
@@ -220,7 +227,7 @@ const allData = {
     edit: false
   },
   Git: {
-    time: 20,
+    time: 20.5,
     startTime: "2017/6/1",
     endTime: "2020/3/25",
     type: "工具",
@@ -254,7 +261,7 @@ const allData = {
  */
 const webData = {
   JavaScript: {
-    time: 391.5,
+    time: 392,
     startTime: "2017/3/1",
     endTime: "2020/2/24",
     type: "前端",
@@ -289,9 +296,9 @@ const webData = {
     edit: false
   },
   Vue: {
-    time: 170,
+    time: 183,
     startTime: "2018/2/8",
-    endTime: "2020/3/27",
+    endTime: "2020/5/17",
     type: "前端",
     edit: false
   },
@@ -316,6 +323,13 @@ const webData = {
     type: "前端",
     edit: false
   },
+  "Cube-UI": {
+    time: 13.5,
+    startTime: "2020/3/1",
+    endTime: "2020/5/17",
+    type: "前端",
+    edit: false
+  },
   "E-Chart": {
     time: 11,
     startTime: "2018/10/10",
@@ -324,21 +338,21 @@ const webData = {
     edit: false
   },
   "uni-app": {
-    time: 2,
+    time: 14,
     startTime: "2020/2/24",
-    endTime: "2020/2/24",
+    endTime: "2020/5/17",
     type: "前端",
     edit: false
   },
   微信小程序: {
-    time: 14,
+    time: 19,
     startTime: "2018/7/6",
     endTime: "2020/3/27",
     type: "前端",
     edit: false
   },
   HTML4: {
-    time: 83.5,
+    time: 84.5,
     startTime: "2016/11/1",
     endTime: "2020/1/18",
     type: "前端",
@@ -359,9 +373,9 @@ const webData = {
     edit: false
   },
   CSS3: {
-    time: 55,
+    time: 59.5,
     startTime: "2017/3/22",
-    endTime: "2019/5/21",
+    endTime: "2020/5/17",
     type: "前端",
     edit: false
   },
@@ -400,9 +414,9 @@ const backData = {
     edit: false
   },
   Java: {
-    time: 106,
+    time: 112,
     startTime: "2019/7/30",
-    endTime: "2020/1/18",
+    endTime: "2020/5/17",
     type: "后端",
     edit: false
   },
@@ -421,9 +435,9 @@ const backData = {
     edit: false
   },
   SpringBoot: {
-    time: 10,
+    time: 23,
     startTime: "2020/2/20",
-    endTime: "2020/3/27",
+    endTime: "2020/5/17",
     type: "后端",
     edit: false
   },
@@ -435,14 +449,14 @@ const backData = {
     edit: false
   },
   Linux: {
-    time: 7,
+    time: 8,
     startTime: "2020/3/6",
     endTime: "2020/3/27",
     type: "后端",
     edit: false
   },
   Nginx: {
-    time: 7,
+    time: 8,
     startTime: "2020/3/10",
     endTime: "2020/3/27",
     type: "后端",
@@ -463,9 +477,9 @@ const backData = {
     edit: false
   },
   MySQL: {
-    time: 29,
+    time: 33,
     startTime: "2018/9/15",
-    endTime: "2020/1/18",
+    endTime: "2020/5/17",
     type: "后端",
     edit: false
   }
@@ -489,7 +503,7 @@ const hackData = {
  */
 const toolsData = {
   Git: {
-    time: 20,
+    time: 20.5,
     startTime: "2017/6/1",
     endTime: "2020/3/25",
     type: "工具",
